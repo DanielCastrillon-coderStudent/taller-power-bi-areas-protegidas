@@ -95,10 +95,23 @@ for nombre, tam, color in [("Heading 1", 15, RGBColor(0x1F, 0x3B, 0x57)),
     estilo.paragraph_format.space_after = Pt(6)
 
 seccion = doc.sections[0]
+seccion.page_width = Cm(21.0)
+seccion.page_height = Cm(29.7)
 seccion.top_margin = Cm(2.54)
 seccion.bottom_margin = Cm(2.54)
 seccion.left_margin = Cm(2.54)
 seccion.right_margin = Cm(2.54)
+
+# Metadatos del documento
+doc.core_properties.title = TITULO
+doc.core_properties.subject = SUBTITULO
+doc.core_properties.author = f"{INTEGRANTE_1}; {INTEGRANTE_2}"
+doc.core_properties.last_modified_by = f"{INTEGRANTE_1}; {INTEGRANTE_2}"
+doc.core_properties.comments = ("Taller de visualización de datos en Power BI - "
+                                "Tecnológico de Antioquia")
+doc.core_properties.keywords = "Power BI; datos abiertos; páramo; RAP-E; Big Data"
+doc.core_properties.category = "Informe académico"
+doc.core_properties.language = "es-CO"
 
 # Numeración de páginas en el pie
 pie = seccion.footer.paragraphs[0]
@@ -288,7 +301,7 @@ tabla(
       "Bogotá D.C. y los departamentos de Cundinamarca, Boyacá, Meta y Tolima"],
      ["Áreas protegidas con nombre único", f"{UNICAS}"],
      ["Complejos de páramo identificados", f"{df[PARAMO].nunique()}"]],
-    anchos=[6.0, 10.0],
+    anchos=[5.8, 9.6],
 )
 parrafo("Tabla 1. Características generales del conjunto de datos.",
         cursiva=True, centrado=True, tam=9, color=RGBColor(0x55, 0x55, 0x55))
@@ -320,7 +333,7 @@ tabla(
      ["ÁREA - HECTÁREAS", "Extensión registrada del área, en hectáreas", "Número decimal"],
      ["EJECUCIÓN DE PROYECTOS DE LA RAPE REGION CENTRAL",
       "Indica si el área está vinculada al proyecto de la RAP-E", "Texto"]],
-    anchos=[5.2, 8.3, 2.5],
+    anchos=[5.0, 8.0, 2.4],
 )
 parrafo("Tabla 2. Variables del conjunto de datos y tipo de dato final.",
         cursiva=True, centrado=True, tam=9, color=RGBColor(0x55, 0x55, 0x55))
@@ -416,7 +429,7 @@ tabla(
      ["ÁREA - HECTÁREAS", "Texto con formatos mixtos", "Número decimal"],
      ["FECHA INICIO DE ADMINISTRACIÓN", "Texto en inglés", "Fecha"],
      ["Códigos territoriales", "Texto", "Texto (conservados)"]],
-    anchos=[6.0, 5.0, 5.0],
+    anchos=[5.6, 4.9, 4.9],
 )
 parrafo("Tabla 3. Resumen de las transformaciones aplicadas.",
         cursiva=True, centrado=True, tam=9, color=RGBColor(0x55, 0x55, 0x55))
@@ -451,7 +464,7 @@ parrafo(
     "registros de áreas protegidas? El eje vertical muestra el nombre del "
     "departamento y el eje horizontal el conteo de registros."
 )
-imagen("grafica_departamentos.png", 15.0,
+imagen("grafica_departamentos.png", 14.5,
        "Gráfica 1. Distribución de áreas protegidas por departamento "
        "(elaboración propia en Power BI).")
 parrafo(
@@ -538,7 +551,7 @@ parrafo(
     "mayor y menor representación? El eje horizontal presenta la categoría de "
     "área protegida y el eje vertical el conteo de registros."
 )
-imagen("grafica_categorias.png", 15.0,
+imagen("grafica_categorias.png", 14.5,
        "Gráfica 3. Áreas protegidas según categoría ambiental "
        "(elaboración propia en Power BI).")
 parrafo(
