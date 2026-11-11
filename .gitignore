@@ -1,0 +1,19 @@
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Temporales de Office
+~$*
+*.tmp
+
+# Entornos y editores
+.vscode/
+.idea/

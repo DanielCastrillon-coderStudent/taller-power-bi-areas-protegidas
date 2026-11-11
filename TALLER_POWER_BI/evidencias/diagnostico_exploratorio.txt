@@ -1,0 +1,230 @@
+DIAGNÓSTICO EXPLORATORIO — BASE ORIGINAL
+Archivo analizado: base_original.csv
+Generado por: scripts/analisis_exploratorio.py (no modifica datos)
+
+========================================================================
+1. ESTRUCTURA GENERAL
+========================================================================
+Filas de datos (sin encabezado): 468
+Columnas: 12
+Nombres exactos de las columnas:
+   1. CÓDIGO DE DEPARTAMENTO
+   2. NOMBRE DEL DEPARTAMENTO
+   3. CÓDIGO DE MUNICIPIO
+   4. NOMBRE DE MUNICIPIO
+   5. NOMBRE PARAMO
+   6. NOMBRE ÁREA PROTEGIDA
+   7. ÁREAS PROTEGIDAS DEL SISTEMA NACIONAL DE AREAS PROTEGIDAS
+   8. CATEGORÍA DE ÁREAS PROTEGIDAS (Decreto 2372/2010)
+   9. ADMINISTRADOR
+  10. FECHA INICIO DE ADMINISTRACIÓN
+  11. ÁREA - HECTÁREAS
+  12. EJECUCIÓN DE PROYECTOS DE LA RAPE REGION CENTRAL
+
+========================================================================
+2. VALORES VACÍOS POR COLUMNA
+========================================================================
+  CÓDIGO DE DEPARTAMENTO: 0
+  NOMBRE DEL DEPARTAMENTO: 0
+  CÓDIGO DE MUNICIPIO: 0
+  NOMBRE DE MUNICIPIO: 0
+  NOMBRE PARAMO: 0
+  NOMBRE ÁREA PROTEGIDA: 0
+  ÁREAS PROTEGIDAS DEL SISTEMA NACIONAL DE AREAS PROTEGIDAS: 0
+  CATEGORÍA DE ÁREAS PROTEGIDAS (Decreto 2372/2010): 0
+  ADMINISTRADOR: 0
+  FECHA INICIO DE ADMINISTRACIÓN: 0
+  ÁREA - HECTÁREAS: 0
+  EJECUCIÓN DE PROYECTOS DE LA RAPE REGION CENTRAL: 0
+
+========================================================================
+3. ESPACIOS SOBRANTES (inicio/fin) POR COLUMNA
+========================================================================
+  NOMBRE DE MUNICIPIO: 55 registros; valores afectados: ['ACACIAS ', 'CHOACHI ', 'CHOCONTA ', 'CIENAGA ', 'CUCUMBIO ', 'FOMEQUE ', 'IBAGUE ', 'LEJANIAS ', 'SAMACA ', 'SESQUILE ', 'UMBITA ']
+  NOMBRE PARAMO: 5 registros; valores afectados: ['Chili Barragan ']
+  TOTAL registros con espacios sobrantes: 60
+
+========================================================================
+4. ESPACIOS DOBLES INTERNOS
+========================================================================
+  NOMBRE ÁREA PROTEGIDA: 1 registros; ejemplos: ['Paramos  y Bosques Altoandinos de Genova']
+
+========================================================================
+5. DUPLICADOS EXACTOS (los 12 campos idénticos)
+========================================================================
+  Registros duplicados exactos: 1
+  Filas implicadas (encabezado = fila 1):
+    Fila 208: 15-Boyaca, municipio 15550 PISVA, area 'Cuenca del Rio Cravo Sur', 0.06 ha
+    Fila 420: 15-Boyaca, municipio 15550 PISVA, area 'Cuenca del Rio Cravo Sur', 0.06 ha
+
+========================================================================
+6. VALORES ÚNICOS DE VARIABLES CATEGÓRICAS
+========================================================================
+  CÓDIGO DE DEPARTAMENTO: 5 valores únicos
+     - '25': 225
+     - '15': 162
+     - '73': 40
+     - '50': 32
+     - '11': 9
+  NOMBRE DEL DEPARTAMENTO: 4 valores únicos
+     - 'Cundinamarca': 234
+     - 'Boyaca': 162
+     - 'Tolima': 40
+     - 'Meta': 32
+  CÓDIGO DE MUNICIPIO: 130 valores únicos
+     - '25279': 28
+     - '25322': 27
+     - '25372': 19
+     - '25899': 14
+     - '15646': 13
+     - '15861': 13
+     - '73043': 12
+     - '25120': 11
+     - '25200': 11
+     - '25181': 9
+     ... y 120 valores más
+  NOMBRE DE MUNICIPIO: 131 valores únicos
+     - 'GUASCA': 27
+     - 'FOMEQUE': 22
+     - 'JUNIN': 19
+     - 'ZIPAQUIRA': 14
+     - 'SAMACA ': 13
+     - 'VENTAQUEMADA': 13
+     - 'ANZOATEGUI': 12
+     - 'CABRERA': 11
+     - 'COGUA': 11
+     - 'CHOACHI ': 9
+     ... y 121 valores más
+  NOMBRE PARAMO: 15 valores únicos
+     - 'Chingaza': 144
+     - 'Rabanal y rio Bogota': 66
+     - 'Guerrero': 49
+     - 'Tota - Bijagual - Mamapacha': 46
+     - 'Cruz Verde - Sumapaz': 43
+     - 'Los Nevados': 30
+     - 'Guantiva-La Rusia': 26
+     - 'Iguaque Merchan': 23
+     - 'Pisba': 14
+     - 'Los Picachos': 6
+     ... y 5 valores más
+  NOMBRE ÁREA PROTEGIDA: 101 valores únicos
+     - 'Chingaza': 34
+     - 'Paramo de Guargua y Laguna Verde': 29
+     - 'Paramo de Rabanal': 27
+     - 'Paramos de Guantiva y la Rusia': 19
+     - 'Sumapaz': 16
+     - 'Rios Blanco y Negro': 16
+     - 'Paramo Mamapacha y Bijagual': 16
+     - 'Paramo Rabanal': 14
+     - 'Cortadera': 13
+     - 'Paramo de Cristales, Castillejo o Gauchaneque': 11
+     ... y 91 valores más
+  ÁREAS PROTEGIDAS DEL SISTEMA NACIONAL DE AREAS PROTEGIDAS: 2 valores únicos
+     - 'Areas Protegidas Públicas': 431
+     - 'Areas Protegidas Privadas': 37
+  CATEGORÍA DE ÁREAS PROTEGIDAS (Decreto 2372/2010): 8 valores únicos
+     - 'Distritos Regionales de Manejo Integrado': 111
+     - 'Reservas Forestales Protectoras Regionales': 110
+     - 'Parque Nacional Natural': 81
+     - 'Parques Naturales Regionales': 62
+     - 'Reservas Forestales Protectoras Nacionales': 56
+     - 'Reserva Natural de la Sociedad Civil': 37
+     - 'Santuario de Fauna y Flora': 7
+     - 'Distritos de Conservacion de Suelos': 4
+  ADMINISTRADOR: 11 valores únicos
+     - 'Parques Nacionales Naturales - PNN': 125
+     - 'Corporación Autónoma Regional de Cundinamarca – CAR': 99
+     - 'Ministerio de Ambiente y Desarrollo Sostenible - MADS': 56
+     - 'Corporacion Autonoma Regional de Boyaca – CORPOBOYACA': 56
+     - 'Corporación Autónoma Regional de Chivor – CORPOCHIVOR': 48
+     - 'Corporación Autónoma Regional del Guavio – CORPOGUAVIO': 33
+     - 'Corporación Autónoma Regional del Tolima – CORTOLIMA': 22
+     - 'Corporación Autónoma Regional de Santander – CAS': 19
+     - 'Corporación para el Desarrollo Sostenible del Área de Manejo Especial de La Macarena – CORMACARENA': 4
+     - 'Corporación Autónoma Regional del Quindío – CRQ': 3
+     - 'Corporación Autónoma Regional del Alto Magdalena - CAM': 3
+  EJECUCIÓN DE PROYECTOS DE LA RAPE REGION CENTRAL: 2 valores únicos
+     - 'Proyecto Implementación de acciones de conservación y restauración de los complejos de páramo, bosque alto-andino y servicios ecosistémicos de la Región Central': 462
+     - 'Ninguno': 6
+
+========================================================================
+7. CONSISTENCIA CÓDIGO-NOMBRE DE DEPARTAMENTO
+========================================================================
+  Código 11: ['Cundinamarca']
+  Código 15: ['Boyaca']
+  Código 25: ['Cundinamarca']
+  Código 50: ['Meta']
+  Código 73: ['Tolima']
+  Nota: el código DANE 11 corresponde a Bogotá D.C. y el 25 a Cundinamarca
+  (División Político-Administrativa - DIVIPOLA del DANE). Los 9 registros con
+  código 11 tienen municipio 11001 (BOGOTA) pero nombre 'Cundinamarca'.
+
+========================================================================
+8. CONSISTENCIA PREFIJO MUNICIPIO vs CÓDIGO DEPARTAMENTO
+========================================================================
+  Registros cuyo código de municipio NO inicia con el código de departamento: 0
+
+========================================================================
+9. CONSISTENCIA CÓDIGO-NOMBRE DE MUNICIPIO
+========================================================================
+  Códigos de municipio con más de un nombre: 2
+    15842: ['UMBITA', 'UMBITA ']
+    25279: ['FOMEQUE', 'FOMEQUE ']
+  (Se debe únicamente a espacios sobrantes: 'FOMEQUE '/'FOMEQUE' y 'UMBITA '/'UMBITA')
+  Nombres de municipio compartidos por más de un código: 1
+    'TURMEQUE': códigos ['15835', '15897']
+      Código 15835: 4 registros
+      Código 15897: 1 registros
+  Nota: según la DIVIPOLA del DANE, el código 15835 corresponde a Túrmeque y
+  el 15897 a Ubalá (ambos en Boyacá). La inconsistencia se documenta y NO se
+  corrige para no alterar el dato territorial de la fuente.
+
+========================================================================
+10. FORMATO Y ESTADÍSTICAS DE HECTÁREAS
+========================================================================
+  decimal con punto, sin miles (ej. 966.34): 369 registros
+  entero (ej. 322): 9 registros
+  coma de miles y punto decimal (ej. 5,716.92): 90 registros
+  Mínimo: 0.0  |  Máximo: 66741.42
+  Suma total: 681672.38 ha
+  Media: 1456.56  |  Mediana: 27.93
+  Q1: 2.32  |  Q3: 375.24
+  Registros fuera del rango intercuartílico [-557.07, 934.63]: 96 (áreas grandes legítimas, no se eliminan)
+  Registros con 0 hectáreas: 7
+
+========================================================================
+11. FORMATO DE FECHAS
+========================================================================
+  Formatos detectados:
+    AAAA MMM DD hh:mm:ss AM/PM (mes en inglés): 468 registros
+  Rango de años: 1968 a 2017
+  Años con más registros: 2008 (52), 2009 (51), 2011 (46), 1977 (42), 1968 (34)
+
+========================================================================
+12. CONTEOS PARA LAS TRES VISUALIZACIONES (base original, 468 registros)
+========================================================================
+  Gráfica 1 — Registros por departamento (nombre):
+    Cundinamarca: 234 (50.00 %)
+    Boyaca: 162 (34.62 %)
+    Tolima: 40 (8.55 %)
+    Meta: 32 (6.84 %)
+  Gráfica 2 — Registros por tipo SINAP (pública/privada):
+    Areas Protegidas Públicas: 431 (92.09 %)
+    Areas Protegidas Privadas: 37 (7.91 %)
+  Gráfica 3 — Registros por categoría de área protegida:
+    Distritos Regionales de Manejo Integrado: 111 (23.72 %)
+    Reservas Forestales Protectoras Regionales: 110 (23.50 %)
+    Parque Nacional Natural: 81 (17.31 %)
+    Parques Naturales Regionales: 62 (13.25 %)
+    Reservas Forestales Protectoras Nacionales: 56 (11.97 %)
+    Reserva Natural de la Sociedad Civil: 37 (7.91 %)
+    Santuario de Fauna y Flora: 7 (1.50 %)
+    Distritos de Conservacion de Suelos: 4 (0.85 %)
+
+========================================================================
+13. LIMITACIÓN METODOLÓGICA: REGISTROS vs ÁREAS ÚNICAS
+========================================================================
+  Registros totales: 468
+  Áreas protegidas con nombre único: 101
+  Áreas presentes en más de un municipio: 61
+  Ejemplos: Sumapaz (12 municipios), Paramos de Guantiva y la Rusia (12 municipios), Paramo Mamapacha y Bijagual (10 municipios), Paramo de Guargua y Laguna Verde (10 municipios), Chingaza (10 municipios)

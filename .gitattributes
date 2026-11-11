@@ -1,0 +1,9 @@
+# Preservar los bytes originales de todos los archivos (sin conversión CRLF/LF)
+* -text
+
+# Archivos binarios
+*.pbix binary
+*.docx binary
+*.png binary
+*.jpeg binary
+*.jpg binary

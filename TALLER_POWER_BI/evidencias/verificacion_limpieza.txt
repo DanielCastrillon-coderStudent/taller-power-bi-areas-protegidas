@@ -1,0 +1,66 @@
+REGISTRO DE LIMPIEZA Y VERIFICACIÓN — BASE LIMPIA
+Entrada: base_original.csv (intacta)
+
+========================================================================
+Estado inicial: 468 registros x 12 columnas
+========================================================================
+
+PASO 1 — Recorte de espacios sobrantes (equivalente a Text.Trim en Power Query)
+  Celdas corregidas: 60 (55 en municipio, 5 en páramo)
+  [OK] 0 celdas con espacios sobrantes (antes: 60).
+  [OK] Nombres de municipio distintos: 129 (antes: 131). Se unificaron 'FOMEQUE '/'FOMEQUE' y 'UMBITA '/'UMBITA'; quedan 129 nombres para 130 códigos porque TURMEQUE aparece con dos códigos (15835 y 15897) en el dato fuente, inconsistencia que se documenta y NO se corrige.
+
+PASO 2 — Normalización de espacios internos dobles
+  Corregidos: 1 registro(s) ('Paramos  y Bosques Altoandinos de Genova')
+  [OK] 0 celdas con espacios dobles internos.
+
+PASO 3 — Eliminación de registros completamente duplicados
+  Fila eliminada (420 del CSV): 15-Boyaca, municipio 15550 PISVA, páramo 'Pisba', área 'Cuenca del Rio Cravo Sur', 0.06 ha
+  [OK] Registros: 468 -> 467 (se eliminó exactamente 1 duplicado completo).
+  [OK] El área 'Cuenca del Rio Cravo Sur' en el municipio PISVA queda exactamente una vez.
+
+PASO 4 — Conversión de 'ÁREA - HECTÁREAS' a número decimal
+  Formato del dato fuente: inglés (coma = miles, punto = decimal).
+  [OK] Los 467 valores se convirtieron a número decimal sin errores.
+  Mínimo: 0.0 | Máximo: 66741.42 | Suma: 681672.32 ha | Media: 1459.68 | Mediana: 28.29
+  [OK] Suma de hectáreas verificada: 681672.32 (original 681672.38 menos el duplicado de 0.06).
+
+PASO 5 — Conversión de 'FECHA INICIO DE ADMINISTRACIÓN' a tipo fecha
+  [OK] Las 467 fechas quedaron en formato AAAA-MM-DD (rango 1968-06-24 a 2017-09-19).
+
+PASO 6 — Códigos territoriales conservados como TEXTO
+  [OK] Código de departamento (2 dígitos) y de municipio (5 dígitos) conservados como texto, sin pérdida de ceros iniciales.
+
+========================================================================
+VERIFICACIÓN FINAL — CONTEOS DE LAS TRES GRÁFICAS (467 registros)
+========================================================================
+
+Gráfica 1 — Registros por departamento:
+  Cundinamarca: 234 (50.11 %)
+  Boyaca: 161 (34.48 %)
+  Tolima: 40 (8.57 %)
+  Meta: 32 (6.85 %)
+  [OK] Conteos por departamento coinciden con lo acordado (234/161/40/32).
+
+Gráfica 2 — Registros por tipo SINAP:
+  Areas Protegidas Públicas: 430 (92.08 %)
+  Areas Protegidas Privadas: 37 (7.92 %)
+  [OK] Conteos pública/privada coinciden con lo acordado (430/37).
+
+Gráfica 3 — Registros por categoría:
+  Distritos Regionales de Manejo Integrado: 111 (23.77 %)
+  Reservas Forestales Protectoras Regionales: 110 (23.55 %)
+  Parque Nacional Natural: 81 (17.34 %)
+  Parques Naturales Regionales: 62 (13.28 %)
+  Reservas Forestales Protectoras Nacionales: 55 (11.78 %)
+  Reserva Natural de la Sociedad Civil: 37 (7.92 %)
+  Santuario de Fauna y Flora: 7 (1.50 %)
+  Distritos de Conservacion de Suelos: 4 (0.86 %)
+  [OK] Conteos por categoría coinciden con lo acordado (111/110/81/62/55/37/7/4).
+
+Otras verificaciones de integridad:
+  Nombres de páramo distintos: 15 (original: 15)
+  Áreas protegidas con nombre único: 101 (original: 101)
+  Administradores distintos: 11 (original: 11)
+  Códigos de municipio distintos: 130 (original: 130)
+  Registros con proyecto RAPE 'Ninguno': 6 (original: 6)
